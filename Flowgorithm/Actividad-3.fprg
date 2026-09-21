@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Actividad-3"/>
+        <attribute name="authors" value="crist"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-09-19 06:26:29 p. m."/>
+        <attribute name="created" value="Y3Jpc3Q7TElHSFQ7MjAyNi0wOS0xOTswNTo0MzoxMiBwLiBtLjsyNDAx"/>
+        <attribute name="edited" value="Y3Jpc3Q7TElHSFQ7MjAyNi0wOS0xOTswNjoyNjoyOSBwLiBtLjsyOzI1MjA="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="largo, ancho, precio, area, total" type="Real" array="False" size=""/>
+            <input variable="largo"/>
+            <input variable="ancho"/>
+            <input variable="precio"/>
+            <assign variable="area" expression="largo*ancho"/>
+            <if expression="area &gt; 1000">
+                <then>
+                    <assign variable="total" expression="(area * precio) * 0.75"/>
+                </then>
+                <else>
+                    <if expression="area &gt; 500">
+                        <then>
+                            <assign variable="total" expression="(area * precio) * 0.83"/>
+                        </then>
+                        <else>
+                            <assign variable="total" expression="area * precio"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="&quot;Precio del terreno es: $ &quot; &amp; total" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

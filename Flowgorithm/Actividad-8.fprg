@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Actividad-8"/>
+        <attribute name="authors" value="crist"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-09-20 09:03:00 p. m."/>
+        <attribute name="created" value="Y3Jpc3Q7TElHSFQ7MjAyNi0wOS0yMDswODo0ODo0MCBwLiBtLjsyNDAy"/>
+        <attribute name="edited" value="Y3Jpc3Q7TElHSFQ7MjAyNi0wOS0yMDswOTowMzowMCBwLiBtLjsyOzI0OTk="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, i" type="Integer" array="False" size=""/>
+            <declare name="producto, valorPi" type="Real" array="False" size=""/>
+            <assign variable="n" expression="0"/>
+            <while expression="n &lt;= 0">
+                <output expression="&quot;N&#250;mero de t&#233;rminos?&quot;" newline="True"/>
+                <input variable="n"/>
+                <if expression="n &lt;= 0">
+                    <then>
+                        <output expression="&quot;Error, el n&#250;mero debe ser mayor que cero&quot;" newline="True"/>
+                    </then>
+                    <else/>
+                </if>
+            </while>
+            <assign variable="producto" expression="1.0"/>
+            <for variable="i" start="1" end="n" direction="inc" step="1">
+                <if expression="i % 2 != 0">
+                    <then>
+                        <assign variable="producto" expression="producto * ((i + 1.0) / i)"/>
+                    </then>
+                    <else>
+                        <assign variable="producto" expression="producto * (i / (i + 1.0))"/>
+                    </else>
+                </if>
+            </for>
+            <assign variable="valorPi" expression="2.0 * producto"/>
+            <output expression="&quot;Valor aproximado de pi = &quot; &amp; ToFixed(valorPi, 4)" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

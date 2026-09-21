@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Activivad-1"/>
+        <attribute name="authors" value="crist"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-09-19 10:56:22 a. m."/>
+        <attribute name="created" value="Y3Jpc3Q7TElHSFQ7MjAyNi0wOS0xOTswODo0MjoyOSBhLiBtLjsyMzk2"/>
+        <attribute name="edited" value="Y3Jpc3Q7TElHSFQ7MjAyNi0wOS0xOTsxMDo1NjoyMiBhLiBtLjsxOzI0OTU="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="H, W, X, S" type="Real" array="False" size=""/>
+            <input variable="H"/>
+            <input variable="W"/>
+            <assign variable="X" expression="H/W"/>
+            <assign variable="S" expression="2 * W * (Sqrt(X^2 + 1/16) + (1/(16*X)) * (Log(X + Sqrt(X^2 + 1/16)) + Log(4)))"/>
+            <output expression="&quot;La longitud de arco de la par&#225;bola es: &quot; &amp; S" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

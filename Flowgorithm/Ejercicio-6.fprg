@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Ejercicio-6"/>
+        <attribute name="authors" value="crist"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-09-20 08:42:20 p. m."/>
+        <attribute name="created" value="Y3Jpc3Q7TElHSFQ7MjAyNi0wOS0yMDswNzozNToyNSBwLiBtLjsyNDAw"/>
+        <attribute name="edited" value="Y3Jpc3Q7TElHSFQ7MjAyNi0wOS0yMDswODo0MjoyMCBwLiBtLjsyOzI1MDM="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="num, suma, i" type="Integer" array="False" size=""/>
+            <assign variable="suma" expression="0"/>
+            <output expression="&quot;Dame un n&#250;mero entero positivo: &quot;" newline="True"/>
+            <input variable="num"/>
+            <if expression="num &gt; 0">
+                <then>
+                    <output expression="&quot;La suma de todos sus divisores menores o iguales a &#233;l es:&quot;" newline="True"/>
+                    <for variable="i" start="1" end="num" direction="inc" step="1">
+                        <if expression="num % i == 0">
+                            <then>
+                                <assign variable="suma" expression="suma + i"/>
+                                <output expression="i" newline="True"/>
+                            </then>
+                            <else/>
+                        </if>
+                    </for>
+                </then>
+                <else>
+                    <output expression="&quot;El n&#250;mero debe ser positivo&quot;" newline="True"/>
+                </else>
+            </if>
+            <output expression="&quot;Suma total = &quot; &amp; suma" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

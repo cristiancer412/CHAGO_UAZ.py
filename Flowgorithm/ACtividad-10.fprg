@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="ACtividad-10"/>
+        <attribute name="authors" value="crist"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-09-20 09:15:55 p. m."/>
+        <attribute name="created" value="Y3Jpc3Q7TElHSFQ7MjAyNi0wOS0yMDswOTowODo1OSBwLiBtLjsyNDA5"/>
+        <attribute name="edited" value="Y3Jpc3Q7TElHSFQ7MjAyNi0wOS0yMDswOToxNTo1NSBwLiBtLjsyOzI1MTI="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n1, n2, inicio, fin, suma, i" type="Integer" array="False" size=""/>
+            <assign variable="suma" expression="0"/>
+            <output expression="&quot;Dame el primer n&#250;mero entero positivo: &quot;" newline="True"/>
+            <input variable="n1"/>
+            <output expression="&quot;Dame el segundo n&#250;mero entero positivo: &quot;" newline="True"/>
+            <input variable="n2"/>
+            <if expression="n1 &gt; 0 &amp;&amp; n2 &gt; 0">
+                <then>
+                    <if expression="n1 &lt; n2">
+                        <then>
+                            <assign variable="inicio" expression="n1"/>
+                            <assign variable="fin" expression="n2"/>
+                        </then>
+                        <else>
+                            <assign variable="inicio" expression="n2"/>
+                            <assign variable="fin" expression="n1"/>
+                        </else>
+                    </if>
+                    <for variable="i" start="inicio" end="fin" direction="inc" step="1">
+                        <if expression="i % 2 != 0">
+                            <then>
+                                <assign variable="suma" expression="suma + i"/>
+                            </then>
+                            <else/>
+                        </if>
+                    </for>
+                    <output expression="&quot;La suma de los n&#250;meros impares entre los n&#250;meros que me diste es: &quot; &amp; suma" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Ambos n&#250;meros deben ser mayores que cero&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
